@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Lapangan Bulutangkis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="requireLogin(); loadLapangan();">
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <button id="back-btn" onclick="history.back()">← Back</button>
+        <div>🏸 Data Lapangan Bulutangkis</div>
+        <div>
+            <button onclick="logout()" class="btn-nav">Logout</button>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <h2>Kelola Lapangan</h2>
+
+        <!-- FORM -->
+        <div class="form-card">
+            <input type="text" id="namaLapangan" placeholder="Jenis Lapangan">
+            <input type="text" id="tipeLapangan" placeholder="Tipe Lapangan">
+            <input type="number" id="hargaLapangan" placeholder="Harga / Jam">
+            <button type="button" onclick="addLapangan()" class="btn-primary">
+                Simpan Lapangan
+            </button>
+        </div>
+
+        <!-- TABLE -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Jenis</th>
+                    <th>Tipe</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tableLapangan"></tbody>
+        </table>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/lapangan.js"></script>
+</body>
+</html>

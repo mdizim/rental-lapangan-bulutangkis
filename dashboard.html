@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin – Rental Bulutangkis</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="requireLogin()">
+
+    <nav class="nav">
+        <div class="nav-left">🏸 Rental Lapangan Bulutangkis</div>
+        <div class="nav-right">
+            <button onclick="logout()" class="btn-nav">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1>Dashboard Admin</h1>
+        <p>Kelola data lapangan, jadwal session, dan pemesanan.</p>
+
+        <div class="dashboard-menu">
+            <a href="lapangan.html" class="menu-card">Kelola Lapangan</a>
+            <a href="pemesanan.html" class="menu-card">Kelola Pesanan</a>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

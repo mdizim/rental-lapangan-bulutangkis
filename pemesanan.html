@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Pemesanan Lapangan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadPemesanan()">
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <button id="back-btn" onclick="history.back()">← Back</button>
+        <div>🏸 Kelola Pesanan</div>
+        <div>
+            <button onclick="logout()" class="btn-nav">Logout</button>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="page-container">
+        <h2>Kelola Pesanan</h2>
+
+        <!-- FORM -->
+        <div class="form-card">
+            <input type="text" id="nama" placeholder="Nama Penyewa">
+            <select id="lapangan" onchange="updateHarga()">
+                <option value="">Pilih Jenis Lapangan</option>
+            </select>
+            <input type="date" id="tanggal">
+            <input type="time" id="jamMasuk" onchange="updateHarga()">
+            <input type="time" id="jamKeluar" onchange="updateHarga()">
+            <input type="text" id="telepon" placeholder="Nomor Telepon">
+            <input type="number" id="harga" placeholder="Total Harga" readonly>
+            <button type="button" onclick="addPemesanan()" class="btn-primary">
+                Tambah Pesanan
+            </button>
+        </div>
+
+        <!-- TABLE -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Penyewa</th>
+                    <th>Jenis Lapangan</th>
+                    <th>Tanggal</th>
+                    <th>Jam Masuk - Jam Keluar</th>
+                    <th>Telepon</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tablePemesanan"></tbody>
+        </table>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/pemesanan.js"></script>
+</body>
+</html>
